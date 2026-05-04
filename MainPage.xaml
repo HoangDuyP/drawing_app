@@ -3,26 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="drawing_app.MainPage">
     <Grid RowDefinitions="Auto,*,Auto">
-        <HorizontalStackLayout Grid.Row="0" Padding="10" Spacing="10" BackgroundColor="#EEE" HorizontalOptions="Fill">
-            <Grid ColumnDefinitions="Auto,* ,Auto" Padding="10" HorizontalOptions="Fill">
-
+        <Grid Grid.Row="0" Padding="10" BackgroundColor="#EEE">
+            <Grid ColumnDefinitions="Auto,* ,Auto" RowDefinitions="Auto, Auto" Padding="10">
                 <!-- LEFT -->
-                <HorizontalStackLayout Grid.Column="0" Spacing="10" BackgroundColor="Transparent">
-                    <Button ImageSource="dot.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnDotClicked"/>
-                    <Button ImageSource="line.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnLineClicked"/>
-                    <Button ImageSource="ellipse.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnEllipseClicked"/>
-                    <Button ImageSource="circle.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnCircleClicked"/>
-                    <Button ImageSource="square.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnSquareClicked"/>
-                    <Button ImageSource="rectangle.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnRectangleClicked"/>
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="0"  Spacing="10" BackgroundColor="White">
+                    <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="dot.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnDotClicked"/>
+                    <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="line.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnLineClicked"/>
+                    <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="ellipse.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnEllipseClicked"/>
+                    <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="circle.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnCircleClicked"/>
+                    <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="square.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnSquareClicked"/>
+                    <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="rectangle.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnRectangleClicked"/>
                 </HorizontalStackLayout>
-
+                <Label Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Padding="0, 10, 0, 0">
+                    Shapes
+                </Label>
                 <!-- RIGHT -->
-                <HorizontalStackLayout Grid.Column="2">
-                    <Button Text="Color"/>
-                    <Button Text="Stroke"/>
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="2" Spacing="10">
+                    <Button Style="{StaticResource SaveButtonStyle}" Text="SAVE"/>
+                    <Button Style="{StaticResource LoadButtonStyle}" Text="LOAD"/>
+                    <Button Style="{StaticResource NewButtonStyle}" Text="NEW"/>
                 </HorizontalStackLayout>
-
             </Grid>
-        </HorizontalStackLayout>
+        </Grid>
     </Grid>
 </ContentPage>
