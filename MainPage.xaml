@@ -4,8 +4,7 @@
              x:Class="drawing_app.MainPage">
     <Grid RowDefinitions="Auto,*,Auto">
         <Grid Grid.Row="0" Padding="10" BackgroundColor="#EEE">
-            <Grid ColumnDefinitions="Auto,* ,Auto" RowDefinitions="Auto, Auto" Padding="10">
-                <!-- LEFT -->
+            <Grid ColumnDefinitions="Auto, 10, Auto, 10, Auto, *, Auto" RowDefinitions="Auto, Auto" Padding="10">
                 <HorizontalStackLayout Grid.Row="0" Grid.Column="0"  Spacing="10" BackgroundColor="White">
                     <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="dot.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnDotClicked"/>
                     <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="line.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnLineClicked"/>
@@ -17,8 +16,27 @@
                 <Label Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Padding="0, 10, 0, 0">
                     Shapes
                 </Label>
-                <!-- RIGHT -->
-                <HorizontalStackLayout Grid.Row="0" Grid.Column="2" Spacing="10">
+
+                <BoxView Grid.Row="0" Grid.Column="2" x:Name="CurrentColorBox" WidthRequest="40" HeightRequest="40" CornerRadius="100" Color="Red"/>
+                <Label Grid.Row="1" Grid.Column="2" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Padding="0, 10, 0, 0">
+                    Current color
+                </Label>
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="4"  Spacing="10" BackgroundColor="White">
+                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="20" HeightRequest="20"/>
+                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="20" HeightRequest="20"/>
+                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
+                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
+                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
+                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
+                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
+                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
+                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
+                    
+                </HorizontalStackLayout>
+                <Label Grid.Row="1" Grid.Column="4" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Padding="0, 10, 0, 0">
+                    Colors
+                </Label>
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="6" Spacing="10">
                     <Button Style="{StaticResource SaveButtonStyle}" Text="SAVE"/>
                     <Button Style="{StaticResource LoadButtonStyle}" Text="LOAD"/>
                     <Button Style="{StaticResource NewButtonStyle}" Text="NEW"/>

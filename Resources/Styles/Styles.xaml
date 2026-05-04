@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Style x:Key="ShapesButtonStyle" TargetType="Button">
-        
+
         <Setter Property="CornerRadius" Value="0"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -27,7 +27,7 @@
                     <!-- Click -->
                     <VisualState Name="Pressed">
                         <VisualState.Setters>
-                            
+
                             <Setter Property="BackgroundColor" Value="SeaGreen"/>
                         </VisualState.Setters>
                     </VisualState>
@@ -169,6 +169,10 @@
 
             </VisualStateGroupList>
         </Setter>
+    </Style>
+    <Style x:Key="ColorButtonStyle" TargetType="Button">
+        <Setter Property="CornerRadius" Value="100"/>
+        
     </Style>
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
