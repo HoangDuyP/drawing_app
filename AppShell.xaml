@@ -7,7 +7,7 @@
     Title="drawing_app">
 
     <ShellContent
-        Title="Home"
+        Title="Drawing App"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
