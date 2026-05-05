@@ -170,8 +170,8 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
-    <Style x:Key="ColorButtonStyle" TargetType="Button">
-        <Setter Property="CornerRadius" Value="100"/>
+    <Style x:Key="ColorButtonStyle" TargetType="BoxView">
+        
         
     </Style>
     <Style TargetType="ActivityIndicator">

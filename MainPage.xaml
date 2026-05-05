@@ -4,7 +4,7 @@
              x:Class="drawing_app.MainPage">
     <Grid RowDefinitions="Auto,*,Auto">
         <Grid Grid.Row="0" Padding="10" BackgroundColor="#EEE">
-            <Grid ColumnDefinitions="Auto, 10, Auto, 10, Auto, *, Auto" RowDefinitions="Auto, Auto" Padding="10">
+            <Grid ColumnDefinitions="Auto, 10, Auto, 10, Auto, 10, Auto, *, Auto" RowDefinitions="Auto, Auto" Padding="10">
                 <HorizontalStackLayout Grid.Row="0" Grid.Column="0"  Spacing="10" BackgroundColor="White">
                     <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="dot.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnDotClicked"/>
                     <Button Style="{StaticResource ShapesButtonStyle}" ImageSource="line.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" Clicked="OnLineClicked"/>
@@ -21,22 +21,78 @@
                 <Label Grid.Row="1" Grid.Column="2" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Padding="0, 10, 0, 0">
                     Current color
                 </Label>
-                <HorizontalStackLayout Grid.Row="0" Grid.Column="4"  Spacing="10" BackgroundColor="White">
-                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="20" HeightRequest="20"/>
-                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="20" HeightRequest="20"/>
-                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
-                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
-                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
-                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
-                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
-                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
-                    <Button Style="{StaticResource ColorButtonStyle}" WidthRequest="40" HeightRequest="40"/>
-                    
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="4" BackgroundColor="White">
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black" StrokeShape="Rectangle"
+                            Margin="10, 10, 0, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24" Color="Black"/>
+                    </Border>
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black" StrokeShape="Rectangle"
+                            Margin="10, 10, 0, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24" Color="White"/>
+                    </Border>
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black" StrokeShape="Rectangle"
+                            Margin="10, 10, 0, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24" Color="Red"/>
+                    </Border>
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black" StrokeShape="Rectangle"
+                            Margin="10, 10, 0, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24" Color="Orange"/>
+                    </Border>
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black" StrokeShape="Rectangle"
+                            Margin="10, 10, 0, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24" Color="Yellow"/>
+                    </Border>
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black" StrokeShape="Rectangle"
+                            Margin="10, 10, 0, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24" Color="Green"/>
+                    </Border>
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black" StrokeShape="Rectangle"
+                            Margin="10, 10, 0, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24" Color="Blue"/>
+                    </Border>
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black" StrokeShape="Rectangle"
+                            Margin="10, 10, 0, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24" Color="Indigo"/>
+                    </Border>
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black" StrokeShape="Rectangle"
+                            Margin="10, 10, 10, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24" Color="Violet"/>
+                    </Border>
                 </HorizontalStackLayout>
                 <Label Grid.Row="1" Grid.Column="4" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Padding="0, 10, 0, 0">
-                    Colors
+                    Color Presets
                 </Label>
-                <HorizontalStackLayout Grid.Row="0" Grid.Column="6" Spacing="10">
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="6" BackgroundColor="White">
+                    <Border WidthRequest="30" HeightRequest="30"
+                            Stroke="Black"
+                            Margin="10, 10, 10, 10">
+                        <BoxView WidthRequest="24" HeightRequest="24">
+                            <BoxView.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="Red" Offset="0.0"/>
+                                    <GradientStop Color="Orange" Offset="0.2"/>
+                                    <GradientStop Color="Yellow" Offset="0.4"/>
+                                    <GradientStop Color="Green" Offset="0.6"/>
+                                    <GradientStop Color="Blue" Offset="0.8"/>
+                                    <GradientStop Color="Purple" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </BoxView.Background>
+                        </BoxView>
+                    </Border>
+                </HorizontalStackLayout>
+                <Label Grid.Row="1" Grid.Column="6" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Padding="0, 10, 0, 0">
+                    Wheel
+                </Label>
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="8" Spacing="10">
                     <Button Style="{StaticResource SaveButtonStyle}" Text="SAVE"/>
                     <Button Style="{StaticResource LoadButtonStyle}" Text="LOAD"/>
                     <Button Style="{StaticResource NewButtonStyle}" Text="NEW"/>
